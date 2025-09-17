@@ -1,0 +1,210 @@
+/* =====================
+   General Page Layout
+===================== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =====================
+   Global Header
+===================== */
+.head {
+  background: linear-gradient(90deg, #21042a, #ba70f0);
+  height: 100px;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0.5px 0.5px 5px black;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.head img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  transition: filter 0.3s;
+}
+
+.head img:hover {
+  filter: brightness(0.5);
+  cursor: pointer;
+}
+
+.head h1 {
+  font-size: 2.2rem;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: normal;
+  text-shadow: 2px 2px 2px rgb(113, 113, 113);
+}
+
+/* =====================
+   Main Page
+===================== */
+main.courses-page {
+  margin: 140px auto 40px; /* Leaves space for fixed header */
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+/* =====================
+   Section Header
+===================== */
+.page-header {
+  text-align: center;
+  background: #21042a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* =====================
+   Courses Section
+===================== */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* =====================
+   Course Card
+===================== */
+.course-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.course-card header h2 {
+  font-size: 26px;
+  margin: 0 0 15px;
+  color: #21042a;
+  border-bottom: 2px solid #ba70f0;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.course-card header h2:hover {
+  color: #993ecf;
+  cursor: default;
+}
+
+.course-card .course-img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* =====================
+   Subheadings
+===================== */
+.course-card h3 {
+  font-size: 20px;
+  margin: 20px 0 10px;
+  color: #bf5555;
+}
+
+/* =====================
+   Lists
+===================== */
+.course-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.course-card ul li {
+  margin: 8px 0;
+  padding-left: 18px;
+  position: relative;
+}
+
+.course-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ba70f0;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.year-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.year-list a {
+  background: #ba70f0;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.year-list a:hover {
+  background: #993ecf;
+}
+
+/* =====================
+   Figure + Caption
+===================== */
+figure {
+  margin: 20px 0;
+  text-align: center;
+}
+
+figcaption {
+  font-size: 14px;
+  color: #666;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* =====================
+   Responsive Design
+===================== */
+@media (max-width: 768px) {
+  .head {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .head img {
+    margin: 0 0 10px;
+  }
+
+  .courses {
+    grid-template-columns: 1fr;
+  }
+}
