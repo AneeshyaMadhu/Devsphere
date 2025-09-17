@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="achievements.css">
+    <link rel="stylesheet" href="project.css">
+</head>
+
+<body>
+     <header class="header">
+    <img src="images/backward-icon.png" alt="Logo">
+    <h1>Project</h1>
+    </header>
+    <!-- header -->
+    <!-- <header>
+        <div class="page-header">
+            <div class="back-button">
+                <a href="../homepage/index.html"><img src="images/backward-icon.png" alt="backward-icon"></a>
+            </div>
+            <div class="page-heading">
+                <h1>Project</h1>
+            </div>
+        </div>
+    </header> -->
+    <!-- body-part -->
+    <div class="card">
+        <div class="card-heading">
+            <h2>Project Guidelines</h2>
+        </div>
+        <div class="card-list">
+            <ol>
+                <li>Project Selection</li>
+                <li>Project Proposal</li>
+                <li>Team Formation</li>
+                <li>Timeline & Milestones</li>
+                <li>Documentation</li>
+                <li>Ethics & Originality</li>
+                <li>Reviews & Presentations</li>
+                <li>Final Submission</li>
+                <li>Viva-Voce</li>
+                <li>Evaluation Criteria</li>
+            </ol>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-heading">
+            <h2>Featured Student Projects</h2>
+        </div>
+        <div class="card-content">
+            <h4>Project Title: Smart Waste Management System</h4>
+            <p>Description:<br> This project introduces an IoT-based solution for efficient waste collection and
+                monitoring. Smart bins equipped with sensors notify municipal authorities when they are full, reducing
+                overflow and improving city hygiene.</p>
+            <img src="images/waste_management.jpg" alt="Waste Management Image">
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-heading">
+            <h2>Final Year Project Gallery</h2>
+        </div>
+        <div class="card-images">
+            <img src="images/Project_expo.png" alt="Project Expo" onclick="openModal(this)">
+            <img src="images/Project_image.jpg" alt="Project Image" onclick="openModal(this)">
+        </div>
+    </div>
+    <!-- For image viewing -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+    <script src="project.js"></script>
+</body>
+
+</html>

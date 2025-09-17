@@ -1,0 +1,147 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+/* Top Gradient Header */
+.head {
+  background: linear-gradient(90deg, #21042a, #ba70f0);
+  height: 100px;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0.5px 0.5px 5px black;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.head img {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  transition: filter 0.3s;
+}
+
+.head img:hover {
+  filter: brightness(0.5);
+  cursor: pointer;
+}
+
+.head h1 {
+  font-size: 2.5rem;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-weight: normal;
+  text-shadow: 2px 2px 2px rgb(113, 113, 113);
+}
+
+/* Add space below fixed header */
+body {
+  padding-top: 110px; /* height of header + extra */
+}
+
+/* Section Header (Optional intro below .head) */
+.site-header {
+  text-align: center;
+  margin-top: -10px;
+  padding: 2rem;
+  background-color: #7c3aed;
+  color: white;
+}
+.site-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+.site-header p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Faculty Grid */
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.faculty-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.faculty-card:hover {
+  transform: translateY(-5px);
+}
+.faculty-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+.faculty-card h3 {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+.faculty-card p {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+.faculty-card .btn {
+  display: inline-block;
+  background: #f39c12;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.faculty-card .btn:hover {
+  background: #d35400;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #2c3e50;
+  color: white;
+  margin-top: 3rem;
+}
+
+/* Responsive Header */
+@media (max-width: 600px) {
+  .head {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+  }
+  .head img {
+    margin: 10px auto;
+  }
+  .head h1 {
+    font-size: 1.8rem;
+    margin: 0;
+  }
+}

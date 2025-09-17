@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Technology</title>
+    <link rel="icon" href="Image/IT logo 1.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Caveat:wght@400..700&family=Chilanka&family=Graduate&family=Itim&family=Knewave&family=Luckiest+Guy&family=Nosifer&family=Playwrite+AU+QLD:wght@100..400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="head">
+        <img src="Image/Back.png" alt="backtomenu">
+        <h1>Gallery</h1>
+    </div>
+    <!-- <button id="mode-toggle"></button> -->
+     <button id="mode-toggle" aria-label="Toggle dark mode">
+  <span id="mode-icon">
+    <!-- Default: Moon (light mode) -->
+    <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFD43B" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1019 14.79a9.05 9.05 0 012 2z"/>
+    </svg>
+  </span>
+</button>
+
+    <!-- design -->
+    <div class="cir"></div>
+    <!-- Department -->
+    <div class="deptxt">
+        <h1>Department Gallery</h1>
+    </div>
+    <div class="images">
+        <div class="img-container imgl" data-title="Department"
+            data-desc="A glimpse of our department, the heart of our college.">
+            <img src="Image/G1img.png" alt="img1">
+        </div>
+        <div class="img-container imgr" data-title="Iftar Event"
+            data-desc="A memorable moment from our Iftar gathering.">
+            <img src="Image/G2Img.png" alt="img2">
+        </div>
+        <div class="img-container imgl" data-title="Farewell"
+            data-desc="Cherishing the farewell celebration for our seniors.">
+            <img src="Image/G4img.png" alt="img3">
+        </div>
+        <div class="img-container imgr" data-title="Lab" data-desc="Inside our lab, where learning meets innovation.">
+            <img src="Image/G3 img.png" alt="img4">
+        </div>
+    </div>
+
+    <!-- Popup modal -->
+    <div class="popup" id="popup">
+        <span class="close">&times;</span>
+        <div class="popup-content">
+            <img id="popupImg" src="" alt="popup">
+            <div class="popup-text">
+                <h2 id="popupTitle"></h2>
+                <p id="popupDesc"></p>
+            </div>
+        </div>
+    </div>
+    <!-- design -->
+    <div class="cir2"></div>
+
+    <div class="etxt">
+        <h1>Event Photo Gallery</h1>
+    </div>
+    <div class="images">
+        <div class="img-container imgl" data-title="Athletics Champions"
+            data-desc="Celebrating our victory as athletic champions of 2025.">
+            <img src="Image/Athletic Champ.png" alt="img1">
+        </div>
+        <div class="img-container imgr" data-title="Arts Champions – Kavitam"
+            data-desc="Proud moments from Kavitam 2024, where we emerged as arts champions.">
+            <img src="Image/Kavettam Champ.png" alt="img2">
+        </div>
+        <div class="img-container imgl" data-title="Kadhal – Valentine’s Day Event"
+            data-desc="A glimpse from Kadhal, our college Valentine’s Day celebration.">
+            <img src="Image/Kathal.png" alt="img3">
+        </div>
+        <div class="img-container imgr" data-title="Overall Sports Champions"
+            data-desc="Capturing the spirit of triumph as overall sports champions of 2025.">
+            <img src="Image/Sports.png" alt="img4">
+        </div>
+    </div>
+
+    <!-- Popup modal -->
+    <div class="popup" id="popup">
+        <span class="close">&times;</span>
+        <div class="popup-content">
+            <img id="popupImg" src="" alt="popup">
+            <div class="popup-text">
+                <h2 id="popupTitle"></h2>
+                <p id="popupDesc"></p>
+            </div>
+        </div>
+    </div>
+    <!-- design -->
+    <div class="cir"></div>
+    <!-- Lab Photo Gallery -->
+    <div class="deptxt">
+        <h1>Lab Photo Gallery</h1>
+    </div>
+    <div class="images">
+        <div class="img-container imgl" data-title="Computer Lab"
+            data-desc="Our computer lab – the hub of digital learning and coding.">
+            <img src="Image/ComputerLab.png" alt="Computer Lab">
+        </div>
+        <div class="img-container imgr" data-title="Software Lab"
+            data-desc="A glimpse of the software lab, where ideas turn into applications.">
+            <img src="Image/SoftwareLab.png" alt="Software Lab">
+        </div>
+        <div class="img-container imgl" data-title="Hardware Lab" data-desc="Hands-on innovation in our hardware lab.">
+            <img src="Image/HardwareLab.png" alt="Hardware Lab">
+        </div>
+        <div class="img-container imgr" data-title="Robotics Lab"
+            data-desc="Exploring the future of technology in the robotics lab.">
+            <img src="Image/Robotics Lab.png" alt="Robotics Lab">
+        </div>
+    </div>
+
+
+    <!-- Popup modal -->
+    <div class="popup" id="popup">
+        <span class="close">&times;</span>
+        <div class="popup-content">
+            <img id="popupImg" src="" alt="popup">
+            <div class="popup-text">
+                <h2 id="popupTitle"></h2>
+                <p id="popupDesc"></p>
+            </div>
+        </div>
+    </div>
+    <div class="btm"></div>
+    <div class="clear"></div>
+    <script>const containers = document.querySelectorAll('.img-container');
+        const popup = document.getElementById('popup');
+        const popupImg = document.getElementById('popupImg');
+        const popupTitle = document.getElementById('popupTitle');
+        const popupDesc = document.getElementById('popupDesc');
+        const closeBtn = document.querySelector('.popup .close');
+
+        let lastTap = 0;
+
+        containers.forEach(container => {
+            container.addEventListener('click', () => {
+                const now = Date.now();
+                if (now - lastTap < 300) { // double tap/click
+                    const img = container.querySelector('img');
+                    popupImg.src = img.src;
+                    popupTitle.textContent = container.getAttribute('data-title');
+                    popupDesc.textContent = container.getAttribute('data-desc');
+                    popup.style.display = 'flex';
+                }
+                lastTap = now;
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) popup.style.display = 'none';
+        });
+       const toggleBtn = document.getElementById("mode-toggle");
+const modeIcon = document.getElementById("mode-icon");
+const body = document.body;
+
+const sunSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFC107" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="5"/>
+    <g stroke="#FFC107" stroke-width="2">
+      <line x1="12" y1="1" x2="12" y2="4"/>
+      <line x1="12" y1="20" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
+      <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="4" y2="12"/>
+      <line x1="20" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
+      <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
+    </g>
+  </svg>
+`;
+
+const moonSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFD43B" viewBox="0 0 24 24">
+    <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1019 14.79a9.05 9.05 0 012 2z"/>
+  </svg>
+`;
+
+// Load saved mode
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  modeIcon.innerHTML = sunSVG;
+} else {
+  modeIcon.innerHTML = moonSVG;
+}
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    modeIcon.innerHTML = sunSVG;
+    localStorage.setItem("theme", "dark");
+  } else {
+    modeIcon.innerHTML = moonSVG;
+    localStorage.setItem("theme", "light");
+  }
+});
+
+    </script>
+</body>
+
+</html>

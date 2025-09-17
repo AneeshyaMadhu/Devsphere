@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Jersey+25&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.card {
+    background-color: #6E5A80;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 55px;
+    height: 210vh;
+    width: 90vw;
+    border-radius: 15px;
+}
+
+.card .card-heading {
+    margin-top: 40px;
+    padding: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.card .card-heading h2 {
+    font-size: 58px;
+    font-family: 'Gentium Book Plus';
+    line-height: 6px;
+    font-weight: lighter;
+}
+
+.card .card-list {
+    width: 70vw;
+    margin-top: 50px;
+    margin-left: 200px;
+    color: white;
+}
+
+.card .card-list ol li {
+    line-height: 2.8;
+    font-size: 44px;
+    font-family: 'Jersey 25';
+    font-weight: bolder;
+}
+
+.card .card-content {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 16px;
+}
+
+.card .card-content h4 {
+    font-size: 44px;
+    font-family: 'Gentium Book Plus';
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+.card .card-content p {
+    font-size: 44px;
+    font-family: 'Gentium Book Plus';
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+.card .card-content img {
+    margin-top: 50px;
+    margin-left: 6%;
+    padding: 30px;
+    width: 65vw;
+}
+
+.card .card-images {
+    margin-top: 90px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 168vh;
+    width: 68vw;
+}
+
+.card .card-images img {
+    margin-bottom: 8%;
+    width: 68vw;
+    height: 75vh;
+    border-radius: 5px;
+}
+
+.card .card-images img:hover {
+    filter: brightness(0.9);
+    box-shadow: 0px 10px 50px black;
+    transition: box-shadow 0.3s ease-out, filter 0.3s ease-out;
+}
+
+/* For image viewing */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}

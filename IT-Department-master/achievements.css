@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Geologica:wght@100..900&family=Jersey+25&family=Jockey+One&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* header part */
+/* header {
+    width: 100%;
+    height: 120px;
+    background-color: #21042A;
+    box-sizing: border-box;
+    box-shadow: 2px 5px 5px gray;
+} */
+.header {
+  background: linear-gradient(90deg, #21042a, #ba70f0);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+.header img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header img:hover {
+  filter: brightness(0.5);
+  cursor: pointer;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+}
+
+/* .back-button button{
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    border-radius: 50%;
+    text-decoration: none;
+} */
+/* .back-button img {
+    margin-left: 10px;
+    margin-top: 20px;
+    height: 80px;
+    line-height: 120px;
+    float: left;
+    border-radius: 50%;
+}
+
+.back-button img:hover {
+    filter: brightness(0.7);
+    transition: ease-in;
+    cursor: pointer;
+}
+
+.page-heading h1 {
+    margin-left: 20px;
+    font-size: 70px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    float: left;
+    line-height: 120px;
+    color: white;
+} */
+
+/* body-part */
+
+.page-body {
+    margin-left: 30px;
+}
+
+.page-body .body-header h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 60px;
+    font-family: 'Gentium Book Plus';
+    font-weight: lighter;
+    text-align: left;
+    display: block;
+}
+
+.cards {
+    padding-bottom: 40px;
+}
+
+.cards .card-img img {
+    width: 45vw;
+    height: 70vh;
+    border-radius: 10px;
+    float: left;
+}
+
+.cards .card-body {
+    margin-top: 0;
+    margin-right: 60px;
+    float: right;
+    width: 40vw;
+    padding: 10px;
+}
+
+.cards .card-body .card-head h3 {
+    font-size: 48px;
+    font-family: 'Freeman';
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cards .card-body .card-para p {
+    font-size: 26px;
+    font-family: 'Gelasio';
+    line-height: 1.8;
+}
+
+.achievement-cards .achievement-img {
+    float: left;
+}
+
+.achievement-cards .achievement-img img {
+    width: 45vw;
+    height: 70vh;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.achievement-cards .achievement-para {
+    margin-right: 60px;
+    float: right;
+    width: 40vw;
+    padding: 10px;
+    height: 150vh;
+}
+
+.achievement-cards .achievement-para p {
+    margin-top: 40px;
+    font-size: 26px;
+    font-family: 'Gelasio';
+    line-height: 1.8;
+}
+
+.alumni-card {
+    margin-right: 30px;
+    margin-bottom: 50px;
+    height: 70vh;
+    border: 35px solid #6E5A80;
+    border-radius: 44px;
+}
+
+.alumni-card .alumni-profile {
+    margin: 30px;
+    margin-top: 10vh;
+    width: 20vw;
+    text-align: center;
+    float: left;
+}
+
+.alumni-card .alumni-profile img {
+    height: 40vh;
+    width: 45vh;
+}
+
+.alumni-card .alumni-profile h3 {
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: 'Geologica';
+}
+
+.alumni-card .alumni-profile h4 {
+    margin-top: 5px;
+    font-size: 25px;
+    font-family: 'Geologica';
+}
+
+.alumni-card .alumni-story {
+    width: 90vh;
+    float: right;
+    margin-top: 8vh;
+    margin-right: 15vw;
+}
+
+.alumni-card .alumni-story p {
+    /* font-weight: bold; */
+    font-size: 19px;
+    font-family: 'Jockey One';
+    line-height: 1.8;
+}
+
+.clear {
+    clear: both;
+}
+
+/* For image viewing  */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
