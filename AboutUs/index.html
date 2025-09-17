@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Image/IT logo 1.png">
+  <title>Information Technology</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Caveat:wght@400..700&family=Chilanka&family=Graduate&family=Itim&family=Knewave&family=Luckiest+Guy&family=Nosifer&family=Playwrite+AU+QLD:wght@100..400&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="scale-wrapper">
+    <!-- head -->
+    <div class="head">
+      <img src="Image/Back.png" alt="backtomenu">
+      <h1>About Us</h1>
+    </div>
+    <!-- <button id="mode-toggle">🌙</button> -->
+    <button id="mode-toggle" aria-label="Toggle dark mode">
+      <span id="mode-icon">
+        <!-- Default: Moon (light mode) -->
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFD43B"
+          viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1019 14.79a9.05 9.05 0 012 2z" />
+        </svg>
+      </span>
+    </button>
+    <!-- image -->
+    <div class="collegeimg">
+      <img src="Image/college.png" alt="college image">
+    </div>
+    <div class="knowus">
+      <h1>Get To Know Us</h1>
+    </div>
+    <!-- design -->
+    <div class="cir"></div>
+
+    <!-- quickfacts -->
+    <div class="qfact">
+      <div class="qhead">
+        <h1>QuickFacts</h1>
+      </div>
+      <div class="body">
+        <h2>Who We <span class="scroll-animate">Are?</span> </h2>
+        <p>We are the Department of Information Technology at GEC Idukki, a hub of innovation, research, and
+          academic excellence.</p>
+        <h2>Our <span class="scroll-animate">Vision</span></h2>
+        <p>To be a centre of excellence in the field of InformationTechnology which nurtures young minds through
+          technological<br>adaptation, research, innovation and entrepreneurial skills<br>complying to the
+          needs
+          of
+          society and industry.</p>
+        <h2>Our <span class="scroll-animate">Mission</span></h2>
+        <p>01. Imparting career oriented professional education to students through effective delivery of the
+          curriculum.</p>
+
+        <p>02. Establishing effective adaptation of cutting edge technologies through industry collaborations
+          and
+          mentoring.</p>
+
+        <p>03. Empowering individuals to be socially responsible by inculcating  critical thinking, innovation
+          and
+          ethical values.</p>
+      </div>
+    </div>
+    <!-- design -->
+    <div class="cir2"></div>
+
+    <!-- quickfacts -->
+    <div class="qfact">
+      <h1 id="dh">Department History</h1>
+      <div class="head1"></div>
+      <div class="body1">
+
+        <p id="dhp">Department of Information Technology at Government Engineering College, ldukki was
+          established in the
+          academic year 2000. The faculties of our department are well qualified and have rich knowledge in
+          their
+          subjects. Highly committed faculty members are keen on encouraging students to involve in various
+          co-curricular and extra-curricular activities along with their academics. Also the department has a
+          highly advanced infrastructure including high speed internet facilities, class rooms equipped with
+          LCD
+          projectors and digital podiums</p>
+
+      </div>
+    </div>
+    <!-- design -->
+    <div class="cir3"></div>
+
+    <!-- accreditations -->
+    <section class="accreditations">
+      <h1 class="accred-title">Accreditations</h1>
+      <div class="accred-grid">
+        <a href="https://www.nbaind.org/" target="_blank">
+          <div class="accred-card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/National_Board_of_Accreditation.svg/375px-National_Board_of_Accreditation.svg.png"
+              alt="NBA Logo">
+            <p>Accredited by <strong>NBA (National Board of Accreditation)</strong></p>
+          </div>
+        </a>
+        <a href="https://www.aicte.gov.in/" target="_blank">
+          <div class="accred-card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/e/eb/All_India_Council_for_Technical_Education_logo.png"
+              alt="AICTE Logo">
+            <p>Approved by <strong>AICTE</strong> for quality technical education</p>
+          </div>
+        </a>
+        <a href="https://ktu.edu.in/" target="_blank">
+          <div class="accred-card" id="ktulogo">
+            <img src="https://upload.wikimedia.org/wikipedia/en/1/12/APJ_Abdul_Kalam_Technological_University_logo.png"
+              alt="KTU Logo">
+            <p>Affiliated to <strong>APJ Abdul Kalam Technological University (KTU)</strong></p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <div class="clear"></div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(".scroll-animate");
+
+      // Split text into spans
+      elements.forEach(el => {
+        const text = el.innerText;
+        el.innerHTML = "";
+        text.split("").forEach((char, i) => {
+          const span = document.createElement("span");
+          span.innerText = char;
+          span.style.setProperty("--i", i);
+          el.appendChild(span);
+        });
+      });
+
+      // Observe scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            entry.target.classList.remove("out-view");
+          } else {
+            entry.target.classList.remove("in-view");
+            entry.target.classList.add("out-view");
+          }
+        });
+      }, { threshold: 0.3 });
+
+      elements.forEach(el => observer.observe(el));
+    });
+       const toggleBtn = document.getElementById("mode-toggle");
+const modeIcon = document.getElementById("mode-icon");
+const body = document.body;
+
+const sunSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFC107" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="5"/>
+    <g stroke="#FFC107" stroke-width="2">
+      <line x1="12" y1="1" x2="12" y2="4"/>
+      <line x1="12" y1="20" x2="12" y2="23"/>
+      <line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/>
+      <line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/>
+      <line x1="1" y1="12" x2="4" y2="12"/>
+      <line x1="20" y1="12" x2="23" y2="12"/>
+      <line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/>
+      <line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/>
+    </g>
+  </svg>
+`;
+
+const moonSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFD43B" viewBox="0 0 24 24">
+    <path d="M21 12.79A9 9 0 0111.21 3 7 7 0 1019 14.79a9.05 9.05 0 012 2z"/>
+  </svg>
+`;
+
+// Load saved mode
+if (localStorage.getItem("theme") === "dark") {
+  body.classList.add("dark-mode");
+  modeIcon.innerHTML = sunSVG;
+} else {
+  modeIcon.innerHTML = moonSVG;
+}
+
+toggleBtn.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+
+  if (body.classList.contains("dark-mode")) {
+    modeIcon.innerHTML = sunSVG;
+    localStorage.setItem("theme", "dark");
+  } else {
+    modeIcon.innerHTML = moonSVG;
+    localStorage.setItem("theme", "light");
+  }
+});
+
+  </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,802 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Caveat:wght@400..700&family=Chilanka&family=Itim&family=Knewave&family=Luckiest+Guy&family=Nosifer&family=Playwrite+AU+QLD:wght@100..400&display=swap');
+
+* {
+  margin: 0%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+@font-face {
+  font-family: 'Haettenschweiler';
+  src: url('fonts/Haettenschweiler.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+html,
+body {
+  overflow-x: hidden;
+
+}
+
+
+.itim-regular {
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/* Head */
+.head {
+  background: linear-gradient(90deg, #21042a, #ba70f0);
+  height: 100px;
+  z-index: 3;
+  position: fixed;
+  width: 100vw;
+  box-shadow: 0.5px 0.5px 5px black;
+
+}
+
+.head img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+
+
+}
+
+.head img:hover {
+
+  filter: brightness(0.5);
+  text-shadow: 2px 2px 2px white;
+  transition: ease-in;
+  cursor: pointer;
+}
+
+.head h1 {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50px;
+  margin-left: 20px;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ 
+
+  font-weight: normal;
+  text-shadow: 2px 2px 2px rgb(113, 113, 113);
+}
+
+/* 🌞 Default (Light Mode Variables) */
+:root {
+  --bg-color: #fdfaf5;        /* soft ivory/white */
+  --text-color: #2a1b1b;      /* deep maroon text */
+  --card-bg: #ffffff;         /* white cards */
+  --button-bg: rgb(0, 0, 0);       /* refreshed maroon (button) */
+  --button-text: #ffffff;     /* white text */
+  --accent-color: #d4af37;    /* rich gold */
+}
+
+/* Apply Variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* 🌙 Dark Mode Overrides */
+body.dark-mode {
+  --bg-color: #1b0f0f;        /* dark maroon background */
+  --text-color: #fdfaf5;      /* ivory text */
+  --card-bg: #2e1a1a;         /* darker maroon card */
+  --button-bg: #ffffff;       /* gold button (opposite of light mode) */
+  --button-text: #1b0f0f;     /* dark maroon text on gold */
+  --accent-color: #c99700;    /* deeper gold accent */
+}
+/* Togglebtn */
+#mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--button-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: background 0.3s, transform 0.3s;
+  z-index: 1000;
+}
+
+#mode-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+#mode-icon svg {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+/* college */
+.collegeimg {
+  position: relative;
+  z-index: 1;
+
+}
+
+.collegeimg img {
+  width: 100vw;
+  height: 700px;
+  float: both;
+  display: inline-block;
+
+
+}
+
+.knowus {
+  height: 100px;
+  background: linear-gradient(90deg, #21042a, #ba70f0);
+
+  width: 60%;
+  border-radius: 20px;
+  margin-left: 325px;
+  z-index: 1;
+  margin-bottom: 70px;
+  display: inline-block;
+  position: absolute;
+
+  left: 28%;
+
+  transform: translate(-50%, -50%);
+
+
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.knowus h1 {
+  font-size: 60px;
+  text-align: center;
+  font-family: Itim;
+  color: white;
+
+
+}
+
+/* design */
+.cir {
+  height: 1000px;
+  width: 1000px;
+  background-color: #7c3aed;
+  border-radius: 50%;
+  float: right;
+  position: relative;
+  z-index: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: -100vw;
+  right: -1000px;
+
+}
+
+.cir2 {
+  height: 1000px;
+  width: 1000px;
+  background-color: #7c3aed;
+  border-radius: 50%;
+  float: right;
+  position: relative;
+  z-index: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: -100vw;
+  right: 500px;
+
+}
+
+/* quickFacts */
+.qfact {
+
+  width: 60%;
+  margin-left: 325px;
+  margin-top: 200px;
+
+  position: relative;
+
+}
+
+
+
+.qfact .qhead {
+  height: 140px;
+  background-color: #7c3aed;
+  border-radius: 25px;
+  top: 500px;
+  position: sticky;
+
+  z-index: -2;
+
+  border: 2px solid gray;
+}
+
+.qfact .head1 {
+  height: 140px;
+  background-color: #7c3aed;
+  border-radius: 25px;
+  top: 500px;
+  position: sticky;
+  
+  z-index: -2;
+
+  border: 2px solid gray;
+}
+
+.qfact .qhead h1 {
+
+  color: rgb(255, 255, 255);
+  font-size: 70px;
+  z-index: 1;
+  font-family: itim;
+ text-shadow: 2px 2px 2px rgb(0, 0, 0);
+ margin-top: 10px;
+ margin-left: 15px;
+}
+
+.qfact .body {
+  height: 1250px;
+  background: linear-gradient(90deg, #21042a, #ba70f0);
+  border-radius: 25px;
+  padding-top: 30px;
+  top: 500px;
+  z-index: 1;
+  position: sticky;
+  margin-top: -30px;
+
+
+
+
+
+}
+
+.qfact .body1 {
+  height: 560px;
+    background: linear-gradient(90deg, #21042a, #ba70f0);
+  border-radius: 25px;
+  padding-top: 30px;
+  top: 500px;
+  z-index: -1;
+  position: sticky;
+  margin-top: -30px;
+  margin-bottom: 75px;
+
+
+
+
+
+}
+
+.qfact .body h2 {
+  font-size: 50px;
+  color: white;
+  margin-left: 40px;
+  font-family: itim;
+  text-shadow: 2px 2px 2px grey;
+}
+
+.qfact .body p {
+  font-size: 28px;
+  margin: 50px 160px;
+  color: white;
+}
+
+.qfact .body1 #dhp {
+  font-size: 28px;
+  margin: 130px 100px 250px 150px;
+  color: white;
+  margin-top: 50px;
+  
+}
+
+.qfact #dh {
+  font-size: 70px;
+  color: rgb(255, 255, 255);
+  margin-left: 40px;
+  font-family: itim;
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  z-index: 4;
+  margin-bottom: -100px;
+  width: 100%;
+
+}
+
+
+/* Accreditations Section */
+.accreditations {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.accred-title {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #222;
+  position: relative;
+}
+
+body.dark-mode .accred-title {
+  color: #f1f1f1;
+}
+
+/* Grid layout */
+.accred-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Card style */
+.accred-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.dark-mode .accred-card {
+  background: #222;
+  color: #eee;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.08);
+}
+
+/* Hover effect */
+.accred-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+/* Logos */
+.accred-card img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.accred-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+body.dark-mode .accred-card p {
+  color: #ddd;
+}
+#ktulogo img {
+  height: 100px;
+}
+.accreditations .accred-grid a{
+  text-decoration: none;
+}
+.clear {
+  clear: both;
+
+}
+
+
+/* ===================== RESPONSIVE OVERRIDES ===================== */
+
+/* Tablet & small laptops */
+@media (max-width: 1024px) {
+
+  /* Header */
+  .head {
+    height: 110px;
+    padding: 0 16px;
+  }
+
+  .head img {
+    width: 60px;
+    height: 60px;
+    margin: 0 16px 0 0;
+  }
+
+  .head h1 {
+    font-size: 44px;
+    line-height: 1;
+    font-family: "Anton", sans-serif;
+  }
+
+  /* Hero image */
+  .collegeimg img {
+    height: 48vh;
+    /* scale with viewport */
+    float: none;
+    /* kill the odd float */
+    display: block;
+    object-fit: cover;
+  }
+
+  /* “Know Us” pill — center it and stop absolute math */
+  .knowus {
+    position: relative;
+    left: auto;
+    transform: none;
+    width: 80%;
+    height: auto;
+    padding: 14px 18px;
+    margin: -28px auto 24px;
+    /* overlaps image a bit, but controlled */
+    border-radius: 16px;
+  }
+
+  .knowus h1 {
+    font-size: clamp(28px, 5vw, 42px);
+  }
+
+  /* Decorative circles – shrink so they don’t flood the page */
+  .cir,
+  .cir2 {
+    width: 520px;
+    height: 520px;
+    opacity: 0.35;
+  }
+
+  .cir {
+    right: -480px;
+    top: 220px;
+  }
+
+  .cir2 {
+    right: 220px;
+    top: 600px;
+  }
+
+  /* Quick Facts wrapper */
+  .qfact {
+    width: 82%;
+    margin: 120px auto 80px;
+
+  }
+
+  /* Sticky headers inside quick facts */
+  .qfact .head,
+  .qfact .head1 {
+    height: 40px;
+    padding: 16px 18px;
+    top: 96px;
+    width: 95%;
+    margin-top: -30px;
+    /* under the smaller header */
+  }
+
+  .qfact .head h1 {
+    font-size: 50px;
+    margin-top: -18px;
+    z-index: 4;
+  }
+
+  /* Quick facts bodies – remove fixed heights */
+  .qfact .body,
+  .qfact .body1 {
+    min-height: auto;
+    height: auto;
+    padding: 22px 18px;
+    margin-top: -18px;
+  }
+
+  .qfact .body h2 {
+    font-size: clamp(22px, 3.8vw, 36px);
+    margin-left: 0;
+  }
+
+  .qfact .body p,
+  .qfact .body1 p,
+  .qfact .body1 #dhp {
+    font-size: clamp(14px, 2.1vw, 20px);
+    margin: 14px 6px;
+    line-height: 1.6;
+  }
+
+  .qfact #dh {
+    /* section divider title */
+    font-size: 50px;
+    margin-bottom: -60px;
+    margin-top: -20px;
+  }
+  /* Hover effect */
+  .accred-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  }
+}
+/* Logos */
+.accred-card img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.accred-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+body.dark-mode .accred-card p {
+  color: #ddd;
+}
+#ktulogo img {
+  height: 100px;
+}
+.accreditations .accred-grid a{
+  text-decoration: none;
+}
+/* Phones / small tablets */
+@media (max-width: 600px) {
+
+  /* Header */
+  .head {
+    height: 78px;
+    padding: 0 12px;
+  }
+
+  .head h1 {
+    font-size: 40px;
+    margin-left: 5px;
+    margin-top: 20px;
+    font-family: "Anton", sans-serif;
+  }
+
+  .head img {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+  }
+
+  /* Hero image */
+  .collegeimg img {
+    height: 34vh;
+    border-radius: 0;
+  }
+
+  /* “Know Us” pill – compact */
+  .knowus {
+    width: 92%;
+    margin: -18px auto 16px;
+    padding: 10px 14px;
+    border-radius: 14px;
+  }
+
+  .knowus h1 {
+    font-size: clamp(18px, 6vw, 26px);
+  }
+
+  /* Hide decorative circles on phones (they eat space) */
+  .cir,
+  .cir2 {
+    display: none;
+  }
+
+  /* Quick Facts stack neatly */
+  .qfact {
+    width: 94%;
+    margin: 80px auto 60px;
+  }
+
+  .qfact .head,
+  .qfact .head1 {
+    position: static;
+    /* disable sticky on phones */
+    height: auto;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 16px;
+    width: 85vw;
+  }
+
+  .qfact .head1 {
+    margin-top: 3px;
+  }
+
+  .qfact .head h1 {
+    font-size: 20px;
+    margin-top: -10px;
+    font-weight: bolder;
+  }
+
+  .qfact .body,
+  .qfact .body1 {
+    position: static;
+    padding: 16px 14px;
+    margin-top: 0;
+    border-radius: 16px;
+  }
+
+  .qfact .body h2 {
+    font-size: clamp(16px, 5.5vw, 22px);
+    margin: 0 0 8px 0;
+  }
+
+  .qfact .body p,
+  .qfact .body1 p,
+  .qfact .body1 #dhp {
+    font-size: clamp(12px, 4.2vw, 16px);
+    margin: 10px 2px;
+    line-height: 1.65;
+  }
+
+  .qfact #dh {
+    font-size: 20px;
+
+    margin-bottom: -25px;
+  }
+
+  /* Hover effect */
+  .accred-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+  }
+
+}
+/* Logos */
+.accred-card img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.accred-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+body.dark-mode .accred-card p {
+  color: #ddd;
+}
+#ktulogo img {
+  height: 100px;
+}
+.accreditations .accred-grid a{
+  text-decoration: none;
+}
+
+
+@media (max-height: 500px) and (orientation: landscape) {
+  
+.head {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .collegeimg img {
+    height: 500px;
+  }
+
+  .knowus {
+    margin: 8px auto;
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .qfact {
+    margin: 40px auto;
+  }
+
+  .qfact .head,
+  .qfact .head1 {
+    top: auto;
+    position: relative;
+    /* disable sticky */
+  }
+
+  .head img {
+    float: left;
+    width: 65px;
+    height: 65px;
+    text-align: center;
+    margin-top: 28px;
+    margin-left: 20px;
+
+
+  }
+
+  .head h1 {
+    margin-top: 30px;
+    font-size: 60px;
+    margin-left: -8px;
+    font-family: "Anton", sans-serif;
+  }
+/* Logos */
+.accred-card img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.accred-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+body.dark-mode .accred-card p {
+  color: #ddd;
+}
+#ktulogo img {
+  height: 100px;
+}
+.accreditations .accred-grid a{
+  text-decoration: none;
+}
+}
+  /* Assemble animation (fade + blur in) */
+  @keyframes textAssemble {
+    0% {
+      opacity: 0;
+      filter: blur(6px);
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+  }
+
+  /* Destroy animation (fade + blur out, no size change) */
+  @keyframes textDestroy {
+    0% {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+
+    100% {
+      opacity: 0;
+      filter: blur(6px);
+      transform: translateY(-20px);
+    }
+  }
+
+  .scroll-animate {
+    display: inline-block;
+  }
+
+  .scroll-animate span {
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+
+  /* Animate letters when visible */
+  .scroll-animate.in-view span {
+    animation: textAssemble 0.6s forwards;
+    animation-delay: calc(var(--i) * 0.05s);
+    /* stagger effect */
+  }
+
+  /* Animate letters when hidden */
+  .scroll-animate.out-view span {
+    animation: textDestroy 0.6s forwards;
+    animation-delay: calc(var(--i) * 0.02s);
+  }
+
