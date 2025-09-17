@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Events</title>
+  <link rel="stylesheet" href="stl.css">
+</head>
+<body>
+  <div class="head">
+      <img src="back.png" alt="backtomenu">
+      <h1>Top Events</h1>
+    </div>
+  <div class="container">
+    <!-- <div class="titles">
+      <a class="bar" href="../homepage/index.html">◀</a>
+      <h1 class="title">Top Events</h1>
+    </div> -->
+
+    <!-- Upcoming Events -->
+    <div class="section">
+      <h2>Upcoming Events</h2>
+      <div class="section-content">
+        <div class="card">
+          <p>Tech Fest</p>
+          <img src="fac.webp" alt="Tech Fest"
+               onclick="openPopup('Tech Fest 🎉', 'Get ready for the grandest celebration of technology! 🚀 From hackathons and coding challenges to AI exhibitions and robotics – Tech Fest is where innovation comes alive!', 'fac.webp')">
+        </div>
+        <div class="card">
+          <p>Useless Project 3.0</p>
+          <img src="seminar.jpg" alt="Useless Project"
+               onclick="openPopup('Useless Project 3.0 🤖', 'Not every project needs to be useful! 😂 This showcase celebrates quirky inventions, useless gadgets, and the wildest ideas students can imagine.', 'seminar.jpg')">
+        </div>
+      </div>
+    </div>
+
+    <!-- Past Events -->
+    <div class="section">
+      <h2>Past Events</h2>
+      <div class="section-content">
+        <div class="card">
+          <p>Sports</p>
+          <img src="ITCHAMP.jpg" alt="Sports"
+               onclick="openPopup('Annual Sports Meet 🏆', 'Relive the thrill of adrenaline! From football battles to track victories, Sports Meet was filled with cheers, sweat, and glory that will never be forgotten.', 'ITCHAMP.jpg')">
+        </div>
+        <div class="card">
+          <p>Farewell</p>
+          <img src="iyt.jpg" alt="Farewell"
+               onclick="openPopup('Farewell Night 🎓', 'An unforgettable evening of laughter, music, and tears as we bid farewell to our seniors and celebrate their journey into the future!', 'iyt.jpg')">
+        </div>
+      </div>
+    </div>
+
+    <!-- Cultural Activities -->
+    <div class="section">
+      <h2>Cultural Activities</h2>
+      <div class="section-content">
+        <div class="card">
+          <img src="event.jpg" alt="Cultural Activity"
+               onclick="openPopup('Dance Fest 💃', 'An evening full of rhythm, colors, and breathtaking performances. Our Dance Fest lit up the stage with talent and energy!', 'event.jpg')">
+        </div>
+        <div class="card">
+          <img src="ittttt.jpg" alt="Cultural Activity"
+               onclick="openPopup('Music Night 🎶', 'A magical night of melodies and talent showcase, where voices and instruments created unforgettable memories.', 'ittttt.jpg')">
+        </div>
+      </div>
+    </div>
+
+    <!-- Workshops & Seminars -->
+    <div class="section">
+      <h2>Workshops & Seminars</h2>
+      <div class="section-content">
+        <div class="card">
+          <img src="iyt.jpg" alt="Workshop"
+               onclick="openPopup('Workshop 💡', 'Hands-on learning sessions that boost technical skills and open doors to creativity.', 'iyt.jpg')">
+        </div>
+        <div class="card">
+          <img src="ittttt.jpg" alt="Seminar"
+               onclick="openPopup('Seminar 🎤', 'Expert talks and interactive sessions on trending topics that broaden perspectives and inspire ideas.', 'ittttt.jpg')">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Popup Box -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <img id="popup-img" src="" alt="Event Image">
+      <h3 id="popup-title"></h3>
+      <p id="popup-text"></p>
+    </div>
+  </div>
+
+  <script>
+    function openPopup(title, text, imgSrc) {
+      document.getElementById("popup-title").innerText = title;
+      document.getElementById("popup-text").innerText = text;
+      document.getElementById("popup-img").src = imgSrc;
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    // Close popup when clicking outside
+    window.onclick = function(event) {
+      const popup = document.getElementById("popup");
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
