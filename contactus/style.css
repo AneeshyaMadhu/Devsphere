@@ -1,0 +1,237 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f4f4fb;
+  color: #333;
+}
+/* Header */
+.header {
+  background: linear-gradient(90deg, #21042a, #ba70f0);
+  height: 100px;
+  z-index: 3;
+  position: fixed;
+  width: 100vw;
+  box-shadow: 0.5px 0.5px 5px black;
+
+}
+.header img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+
+
+}
+
+.header img:hover {
+
+  filter: brightness(0.5);
+  text-shadow: 2px 2px 2px white;
+  transition: ease-in;
+  cursor: pointer;
+}
+
+.header h1 {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 50px;
+  margin-left: 20px;
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+
+  font-weight: normal;
+  text-shadow: 2px 2px 2px rgb(113, 113, 113);
+}
+/* Wrapper */
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(90deg, #21042a, #ba70f0);
+}
+
+/* Card Layout */
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Left Side - Info */
+.contact-info {
+  flex: 1;
+  padding: 40px;
+  background: #fdfdff;
+}
+
+.contact-info h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #21042a;
+}
+
+.contact-info .subtitle {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #7c3aed;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* Right Side - Form */
+.contact-form {
+  flex: 1;
+  padding: 40px;
+  background: #faf9ff;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 6px rgba(124, 58, 237, 0.3);
+}
+
+.contact-form button {
+  padding: 14px;
+  background-color: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #9333ea;
+}
+
+/* 📱 Responsive Styling */
+
+/* Tablets & Small Screens */
+@media (max-width: 992px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 30px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form {
+    padding: 20px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-info .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  .contact-form button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}
+
+/* Landscape Phones */
+@media (max-width: 768px) and (orientation: landscape) {
+  .contact-wrapper {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .contact-card {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .contact-info,
+  .contact-form {
+    flex: 1;
+    padding: 15px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.4rem;
+  }
+
+  .contact-form button {
+    padding: 10px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .contact-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .contact-info .subtitle {
+    font-size: 0.85rem;
+  }
+
+  .contact-form button {
+    font-size: 0.9rem;
+  }
+}
